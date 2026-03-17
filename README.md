@@ -19,7 +19,7 @@ Do sveho LazyVim configu pridej plugin spec:
 ```lua
 return {
   {
-    "USERNAME/vim_g3-faqify",
+    "G3rz/vim_g3-faqify",
     config = function()
       require("g3_faqify").setup()
     end,
