@@ -68,7 +68,7 @@ local function build_pov_output(pairs)
 
   for _, pair in ipairs(pairs) do
     local title = html_escape_attr(pair.q)
-    table.insert(items, string.format('\t\t[item nadpis="%s"]\n\t\t\t%s\n\t\t[/item]', title, pair.a))
+    table.insert(items, string.format('        [item nadpis="%s"]\n            %s\n        [/item]', title, pair.a))
   end
 
   local accordion = "[accordion]\n" .. table.concat(items, "\n") .. "\n[/accordion]"
@@ -86,7 +86,7 @@ local function build_suri_output(pairs)
 
   for _, pair in ipairs(pairs) do
     local title = html_escape_attr(pair.q)
-    table.insert(faqs, string.format('\t[faq otazka="%s"]\n\t\t<p>%s</p>\n\t[/faq]', title, pair.a))
+    table.insert(faqs, string.format('    [faq otazka="%s"]\n        <p>%s</p>\n    [/faq]', title, pair.a))
   end
 
   local shortcode_block = table.concat({
