@@ -75,6 +75,8 @@ local function build_pov_output(pairs)
   local json_block = "<script type=\"application/ld+json\">\n" .. encode_json(build_json_ld(pairs)) .. "\n</script>"
 
   return table.concat({
+    '[tlacitko typ="pov" text="Spočítat povinné ručení" zarovnani="center" trida="mb-4 btn btn-secondary btn-lg"]',
+    "",
     "<!-- FAQ -->\n<h2>Nejčastěji kladené otázky - FAQ</h2>",
     accordion,
     "<!-- /FAQ -->\n" .. json_block,
